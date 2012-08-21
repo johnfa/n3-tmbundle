@@ -27,7 +27,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s*((?i:BASE))\s+(&lt;[^ \&gt;]*&gt;)</string>
+			<string>^\s*((?i:BASE))\s+(<[^ \>]*>)</string>
 			<key>name</key>
 			<string>meta.preprocessor.base.n3</string>
 		</dict>
@@ -51,7 +51,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s*((?i:PREFIX))\s+([a-zA-Z0-9]*:)+\s+(&lt;[^ \&gt;]*&gt;)</string>
+			<string>^\s*((?i:PREFIX))\s+([a-zA-Z0-9]*:)+\s+(<[^ \>]*>)</string>
 			<key>name</key>
 			<string>meta.preprocessor.prefix.n3</string>
 		</dict>
@@ -105,7 +105,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s*((?i:FROM)(?i:\s*NAMED)?)\s+((\b[a-zA-Z0-9\:\-_]+\b)|(&lt;[^ \&gt;]*&gt;))</string>
+			<string>^\s*((?i:FROM)(?i:\s*NAMED)?)\s+((\b[a-zA-Z0-9\:\-_]+\b)|(<[^ \>]*>))</string>
 			<key>name</key>
 			<string>keyword</string>
 		</dict>
@@ -193,7 +193,7 @@
 		<key>PredObjM</key>
 		<dict>
 			<key>begin</key>
-			<string>([a-zA-Z0-9\:\-_]+|&lt;.*&gt;|(\?[a-zA-z0-9_]+))(\s|(?=\())</string>
+			<string>([a-zA-Z0-9\:\-_]+|<.*>|(\?[a-zA-z0-9_]+))(\s|(?=\())</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -401,7 +401,7 @@
 		<key>statement</key>
 		<dict>
 			<key>begin</key>
-			<string>([a-zA-Z0-9\:\-_]+|\[\]|&lt;[^ \&gt;]*&gt;|(\?[a-zA-z0-9_]+))\s*</string>
+			<string>([a-zA-Z0-9\:\-_]+|\[\]|<[^ \>]*>|(\?[a-zA-z0-9_]+))\s*</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -436,7 +436,7 @@
 			<key>begin</key>
 			<string>"""</string>
 			<key>end</key>
-			<string>"""(\^\^([a-zA-z\-\:_]+|&lt;.*&gt;)|@[a-z]+)?\s*([a-zA-Z0-9]*)?</string>
+			<string>"""(\^\^([a-zA-z\-\:_]+|<.*>)|@[a-z]+)?\s*([a-zA-Z0-9]*)?</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>1</key>
@@ -478,14 +478,14 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>("[^"]*")(\^\^([a-zA-z\-\:_]+|&lt;.*&gt;)|@[a-z]+)?[\s,]*([^\.\];\)\}]*)?</string>
+			<string>("[^"]*")(\^\^([a-zA-z\-\:_]+|<.*>)|@[a-z]+)?[\s,]*([^\.\];\)\}]*)?</string>
 			<key>name</key>
 			<string>meta.statement.object.literal.n3</string>
 		</dict>
 		<key>uri</key>
 		<dict>
 			<key>match</key>
-			<string>&lt;(([a-zA-Z][0-9a-zA-Z]*:)?/{0,2}[0-9a-zA-Z;/?:@&amp;=+$\.\-_!~*()%]+)?(\#[0-9a-zA-Z;/?:@&amp;=+$\.\-_!~*%]+)?&gt;</string>
+			<string><(([a-zA-Z][0-9a-zA-Z]*:)?/{0,2}[0-9a-zA-Z;/?:@&amp;=+$\.\-_!~*()%]+)?(\#[0-9a-zA-Z;/?:@&amp;=+$\.\-_!~*%]+)?></string>
 			<key>name</key>
 			<string>meta.tag</string>
 		</dict>
