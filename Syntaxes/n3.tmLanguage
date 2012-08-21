@@ -9,7 +9,7 @@
 		<string>NT</string>
 	</array>
 	<key>foldingStartMarker</key>
-	<string>^([a-zA-Z0-9\:\-_]+|\[\]|&lt;[^ \&gt;]*&gt;)</string>
+	<string>^([a-zA-Z0-9\:\-_]+|\[\]|<[^ \>]*>)</string>
 	<key>foldingStopMarker</key>
 	<string>^\s*\.\s*$\n?</string>
 	<key>keyEquivalent</key>
@@ -44,7 +44,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^(\@prefix )(.*?:)\s+(&lt;[^ \&gt;]*&gt;)\s*.</string>
+			<string>^(\@prefix )(.*?:)\s+(<[^ \>]*>)\s*.</string>
 			<key>name</key>
 			<string>meta.preprocessor.prefix.n3</string>
 		</dict>
@@ -64,7 +64,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>([a-zA-Z0-9\:\-_]+|\[\]|&lt;[^ \&gt;]*&gt;)\s*</string>
+			<string>([a-zA-Z0-9\:\-_]+|\[\]|<[^ \>]*>)\s*</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -95,7 +95,7 @@
 		<key>PredObjM</key>
 		<dict>
 			<key>begin</key>
-			<string>([a-zA-Z0-9\:\-_]+|&lt;[^ &gt;]*&gt;|=|a)(\s|(?=\())</string>
+			<string>([a-zA-Z0-9\:\-_]+|<[^ >]*>|=|a)(\s|(?=\())</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -227,7 +227,7 @@
 			<key>begin</key>
 			<string>"""</string>
 			<key>end</key>
-			<string>[^\\]"""(\^\^([a-zA-z\-\:_]+|&lt;.*?&gt;)|@[a-z]+)?\s*</string>
+			<string>[^\\]"""(\^\^([a-zA-z\-\:_]+|<.*?>)|@[a-z]+)?\s*</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>1</key>
@@ -257,14 +257,14 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(".*?[^\\]")(\^\^(?:[a-zA-z\-\:_]+|&lt;.*?&gt;)|@[a-z]+)?\s*</string>
+			<string>(".*?[^\\]")(\^\^(?:[a-zA-z\-\:_]+|<.*?>)|@[a-z]+)?\s*</string>
 			<key>name</key>
 			<string>meta.statement.object.literal.n3</string>
 		</dict>
 		<key>uri</key>
 		<dict>
 			<key>match</key>
-			<string>&lt;(([a-zA-Z][0-9a-zA-Z]*:)?/{0,2}[0-9a-zA-Z;/?:@&amp;=,+$\.\-_!~*()%]+)?(\#[0-9a-zA-Z;/?:@&amp;=+$\.\-_!~*%]+)?&gt;</string>
+			<string><(([a-zA-Z][0-9a-zA-Z]*:)?/{0,2}[0-9a-zA-Z;/?:@&amp;=,+$\.\-_!~*()%]+)?(\#[0-9a-zA-Z;/?:@&amp;=+$\.\-_!~*%]+)?></string>
 			<key>name</key>
 			<string>meta.tag</string>
 		</dict>
